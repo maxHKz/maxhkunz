@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="styles/websiteStyle.css" media="screen">
+  <link rel="stylesheet" href="https://use.typekit.net/eeu0bqi.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sintony&display=swap" rel="stylesheet">
+  </link>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This project displays an in depth data analysis of the impact of vacation rental giant Airbnb in the city of Barcelona. The included charts and numbers illustrate how many and what listings there are, as well as the price distribution around the city.">
+  <meta name="author" content="Maximilian H. Kunz">
+  <title>Impact of Airbnb in Barcelona</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class='head-part'>
+      <div id="head-grid">
+        <div class="head-part">
+          <a href="/index.html">
+            <h1 class='head-part'>mH.kunz()</h1>
+          </a>
+        </div>
+        <nav id="head-buttons">
+          <ul class="head-buttons">
+            <li class='menu-button'>
+              <a href="/index.html">Projects</a>
+            </li>
+            <li class='menu-button'><a href="/methods.html">Methods</a></li>
+            <li class='menu-button'><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="main_part">
+      <div class="wrapper_pad">
+        <main>
+          <h1 id="project_title_airbnb" class="project_title" align=center>Airbnb in BCN</h1>
+          <h2 class="title_extra" align="center">gentrification in numbers</h2>
+          <div id="pdf_box_container">
+            <div class="pdf_box box_left" style="padding-top:0;">
+              <div class="data_img">
+                <img id="img1" src="images/thumbs/RoomTypes-thumb-01.png" data-original="images/RoomTypes.png" alt="Listing Locations">
+              </div>
+              <div class="data_description">
+                <div>
+                  <h2>LOCATION</h2>
+                </div>
+                <div>
+                  <p align="">To illustrate the scale of Airbnb rentals in Barcelona, the GPS coordinates of the listings are displayed over the city's map, with well known land marks added for orientation. The scale
+                    is further drawn out with some of the raw numbers. The different room types available on Airbnb are color-coded.</p>
+                </div>
+              </div>
+            </div>
+            <hr class="seperator" style="left:0px;right:unset;">
+            <div class="pdf_box box_right">
+              <div class="data_description">
+                <h2 style="margin-left:0px;">DISTRIBUTION</h2>
+                <p style="margin-right:30px;" align="">With the listing's coordinates, details about the accomodation itself and the host has been obtained. The distribution of the whole inventory between hosts and the distribution of the
+                  listings in the neighborhoods are analysed. The gentrification impact in each neighborhood could be calculated by combining the listing data with local census data.</p>
+              </div>
+              <div class="data_img">
+                <img id="img2" src="images/thumbs/Shell-thumb-01.png" data-original="images/Shell-01.png" alt="Listing Distribution">
+              </div>
+            </div>
+            <hr class="seperator">
+            <div class="pdf_box box_left">
+              <div class="data_img">
+                <img id="img3" src="images/thumbs/reviews-thumb-01.png" data-original="images/reviews-01.png" alt="Review Analysis">
+              </div>
+              <div class="data_description">
+                <h2>REVIEWS</h2>
+                <p align="">Every reservation can result in a guest's review displayed on the listing page. All written reviews in all listings could be obtained, together with the corresponding score for the
+                  reservation experience. Additional data on the individual reviews, like creation date and language was included. AI techniques have been used for a semantic analysis of the written content, resulting in an exploratory analysis of
+                  the mental concepts, that guide a traveler's definition of a good stay.</p>
+              </div>
+            </div>
+            <hr class="seperator" style="left:0px;right:unset;">
+            <div class="pdf_box box_right">
+              <div class="data_description">
+                <h2 style="margin-left:0px" ;>DEVELOPMENT THROUGH TIME</h2>
+                <p style="margin-right:30px;" align="">After almost half a year,
+                  the whole process of collecting the inventory has been
+                  repeated, to see the development of the listing count
+                  through the travel seasons. Additionally, the planet has
+                  been facing the COVID-19 pandemic, which put tourism
+                  almost to a complete halt in BCN. The numbers can be
+                  used to derive the impact of the virus on Airbnb's
+                  presence in Barcelona.
+                  <a href="http://insideairbnb.com/barcelona/" target="_blank" rel="external" style="text-decoration:underline;">This</a>
+                  work indicates a pre-COVID maximum count of ~18000
+                  listings, which seems to confirm the estimated ~4000
+                  disappeared listings as of now.
+                </p>
+              </div>
+              <div class="data_img">
+                <img id="img4" src="images/thumbs/inventoryProgress-thumb-01.png" data-original="images/inventoryProgress-01.png" alt="Count across time">
+              </div>
+            </div>
+            <hr class="seperator"
+            style="display:block;margin:auto;position:static;width:30%;">
+            <div class="pdf_box box_center">
+              <div style="margin:auto;">
+                <img id="img5" src="images/thumbs/sandwitch-thumb-01.png" data-original="images/sandwichPlot-01.png" alt="Tessellation Plots">
+              </div>
+              <div class="data_description" style="display:block;">
+                <h2 style="text-align:center;margin-top:2rem;">TESSELLATION PLOT</h2>
+                <p style="margin-bottom:1rem;">A different approach to displaying geographical data is explored in these Tessellation-Plots. The spatial information is delivered via triangles, where each of its vertices mark the LOCATION of an Airbnb listing. The resulting net of triangles, computed by an algorithm called "Delaunay tessellation", allows an intuitive assessment of the listing distribution in the city.
+                </p>
+                <p style="margin-bottom:1rem;">On top of that, the area of the triangles spanning the plane between 3 listings, can be used to calculate a DENSITY measure. Adding up the area of each triangle connected to a vertex and taking its inverse, results in the Delaunay Tessellation Field Estimator (DTFE), a density measure used in astronomy to calculate the density of matter in star clusters. The triangles, so far positioned in the x-y-plane, can now be used to display information in the 3rd dimension, by raising each vertex (listing) in z-direction, corresponding to a variable value, such as the calculated density of the DTFE.</p>
+                <p style="margin-bottom:1rem;">The versatility of this approach is further explored by the visualization of the pricing data obtained for each listing. Again, the position of a vertex along the z-axis shows the average PRICE value per night of that specific listing. Areas on the map can then be compared qualitatively in regards to the price variable. To aid the ability to compare the magnitude of the measured variable, the color of the triangle's lines and area, code as well for the same measure as a spectrum from blue, over green, to red.</p>
+                <p style="margin-bottom:1rem;">All in all, the Tessellation approach reminds of a hexbin plot. However, the advantage of the Tessellation lies clearly in the triangles not being of equal size. Thus, the visualization carries always implicitely information about the density on top of the pure location data. With this as a baseline, color and displacement along the z-axis can be used to visualize additional variables, making it suitable for display of complex multidimensional data in one plot.</p>
+              </div>
+            </div>
+            <hr class="seperator"
+            style="display:block;margin:auto;position:static;width:30%;">
+          </div>
+          <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+            <!-- Modal Content (The Image) -->
+            <a id="modal-link" target="_blank"><img class="modal-content" id="modal-img"></a>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <footer></footer>
+  </div>
+  <script type="text/javascript">
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var img3 = document.getElementById("img3");
+    var img4 = document.getElementById("img4");
+    var img5 = document.getElementById("img5");
+    var modalImg = document.getElementById("modal-img");
+    var modalLink = document.getElementById("modal-link");
+    var captionText = document.getElementById("caption");
+    img1.onclick = function() {
+      modal.style.display = "block";
+      modal.style.visibility ="visible";
+      modal.style.opacity = "1";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+      modalLink.href = this.dataset.original;
+    }
+    img2.onclick = function() {
+      modal.style.display = "block";
+      modal.style.visibility ="visible";
+      modal.style.opacity = "1";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+      modalLink.href = this.dataset.original;
+    }
+    img3.onclick = function() {
+      modal.style.display = "block";
+      modal.style.visibility ="visible";
+      modal.style.opacity = "1";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+      modalLink.href = this.dataset.original;
+    }
+    img4.onclick = function() {
+      modal.style.display = "block";
+      modal.style.visibility ="visible";
+      modal.style.opacity = "1";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+      modalLink.href = this.dataset.original;
+    }
+    img5.onclick = function() {
+      modal.style.display = "block";
+      modal.style.visibility ="visible";
+      modal.style.opacity = "1";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+      modalLink.href = this.dataset.original;
+    }
+
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    modal.onclick = function() {
+      //modal.style.display = "none";
+      modal.style.visibility = "hidden";
+      modal.style.opacity = "0";
+    }
+  </script>
+</body>
+
+</html>
