@@ -152,6 +152,12 @@ hr.seperator_full {
   width: 80%;
   margin: auto;
 }
+hr.center-sep {
+  display:block;
+  margin: 3rem auto;
+  position:static;
+  width:30%;
+}
 
 div.data_img {
   height: inherit;
@@ -356,6 +362,9 @@ ul {
   font-size: 15px;
   padding:0;
   overflow: auto;
+}
+.calc {
+  margin-bottom: 3rem;
 }
 
 .project-logo img {
