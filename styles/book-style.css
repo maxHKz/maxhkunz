@@ -138,13 +138,13 @@ hr.seperator_full {
 
 div.data_img {
   height: inherit;
-  /*! width: max-content; */
   overflow: hidden;
   transition: 0.2s;
   cursor: pointer;
   margin: 0 auto 2rem;
   display: flex;
   flex-flow: row nowrap;
+  grid-area: first;
 }
 
 .data_img img {
@@ -162,6 +162,7 @@ div.data_img {
   max-width: 700px;
   height: 100%;
   margin: 0 auto;
+  grid-area:second;
 }
 
 .data_description p {
@@ -387,12 +388,6 @@ ul {
   }
   .box_left p {
     margin-left: 0px;
-  }
-  .data_img {
-    grid-area: first;
-  }
-  .data_description {
-    grid-area: second;
   }
   .data_description h2{
     margin-top: 2rem;
