@@ -152,6 +152,12 @@ hr.seperator_full {
   width: 80%;
   margin: auto;
 }
+hr.center-sep {
+  display:block;
+  margin: 3rem auto;
+  position:static;
+  width:30%;
+}
 
 div.data_img {
   height: inherit;
@@ -357,12 +363,16 @@ ul {
   padding:0;
   overflow: auto;
 }
+.calc {
+  margin-bottom: 3rem;
+}
 
 .project-logo img {
   margin: auto;
   height:100%;
   width:100%;
   border-radius: 15px;
+  object-fit: contain;
 }
 .project-container {
   display: grid;
@@ -374,7 +384,7 @@ ul {
 }
 .project-description {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -395,7 +405,7 @@ ul {
 
 @media (max-width: 780px) {
   header, div#main_part {
-    min-width: 600px;
+    min-width: 400px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -429,5 +439,24 @@ ul {
   }
   .project-container h1{
     font-size: 25px;
+  }
+  header.head-part{
+    margin: 10px 20px 0;
+  }
+  h1.head-part{
+    font-size:17px;
+  }
+  .head-part a{
+    font-size: 15px;
+  }
+}
+@media (max-width: 470px){
+  .project-container h1{
+    font-size: 20px;
+  }
+  header, div#main_part {
+    min-width: none;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }

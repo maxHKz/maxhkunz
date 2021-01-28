@@ -138,13 +138,13 @@ hr.seperator_full {
 
 div.data_img {
   height: inherit;
-  /*! width: max-content; */
   overflow: hidden;
   transition: 0.2s;
   cursor: pointer;
   margin: 0 auto 2rem;
   display: flex;
   flex-flow: row nowrap;
+  grid-area: first;
 }
 
 .data_img img {
@@ -162,6 +162,7 @@ div.data_img {
   max-width: 700px;
   height: 100%;
   margin: 0 auto;
+  grid-area:second;
 }
 
 .data_description p {
@@ -366,7 +367,7 @@ ul {
 
 @media (max-width: 780px) {
   header, div#main_part {
-    min-width: 600px;
+    min-width: 400px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -385,10 +386,33 @@ ul {
     grid-template-columns: none;
     height:max-content;
   }
-  .data_img {
-    grid-area:'first';
+  .box_left p {
+    margin-left: 0px;
   }
-  .data_description{
-    grid-area:'second';
+  .data_description h2{
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+  .project-container h1{
+    font-size: 25px;
+  }
+  header.head-part{
+    margin: 10px 20px 0;
+  }
+  h1.head-part{
+    font-size:17px;
+  }
+  .head-part a{
+    font-size: 15px;
+  }
+}
+@media (max-width: 470px){
+  .project-container h1{
+    font-size: 20px;
+  }
+  header, div#main_part {
+    min-width: none;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
