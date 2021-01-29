@@ -367,6 +367,10 @@ ul {
   margin-bottom: 3rem;
 }
 
+.calc ul {
+  margin-left: 1em;
+}
+
 .project-logo img {
   margin: auto;
   height:100%;
