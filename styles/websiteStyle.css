@@ -458,8 +458,34 @@ ul {
     font-size: 20px;
   }
   header, div#main_part {
-    min-width: none;
+    min-width: 0px;
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .container{
+    max-width: 370px;
+    margin:auto;
+  }
+  body{
+    max-width: 370px;
+    margin: auto;
+  }
+  h1.head-part{
+    font-size:10px;
+    margin-bottom: 0.3em;
+    display:none;
+  }
+  #head-buttons {
+    margin-bottom: 0;
+  }
+  #pdf_box_container{
+    margin:0;
+  }
+  #head-grid{
+    display:block;
+  }
+  nav {
+    height:25px;
   }
 }
