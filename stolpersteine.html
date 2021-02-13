@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="styles/book-style.css" media="screen">
+  <link rel="stylesheet" href="https://use.typekit.net/eeu0bqi.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sintony&display=swap" rel="stylesheet">
+  </link>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Data analysis of the Stolpersteine art project in Berlin.">
+  <meta name="author" content="Maximilian H. Kunz">
+  <title>Data Analysis of Stolpersteine Berlin</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class='head-part'>
+      <div id="head-grid">
+        <div class="head-part">
+          <a href="/index.html">
+            <h1 class='head-part'>mH.kunz()</h1>
+          </a>
+        </div>
+        <nav id="head-buttons">
+          <ul class="head-buttons">
+            <li class='menu-button'>
+              <a href="/index.html">Projects</a>
+            </li>
+            <li class='menu-button'><a href="/methods.html">Methods</a></li>
+            <li class='menu-button'><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="main_part">
+      <div class="wrapper_pad">
+        <main>
+          <h1 id="project_title_airbnb" class="project_title" align=center>Stolpersteine</h1>
+          <h2 class="title_extra" align="center">berlin</h2>
+          <div id="pdf_box_container">
+            <!-- First IMAGE LOCATION ************************************************-->
+            <div class="pdf_box box_left" style="padding-top:0;">
+              <div class="data_img">
+                <img src="images/stolper/Artboard1.jpg" alt="Stolpersteine Berlin">
+              </div>
+              <div class="data_description">
+                <div>
+                  <h2></h2>
+                </div>
+                <div>
+                  <p align="justify"></p>
+                </div>
+              </div>
+            </div>
+            <hr class="seperator">
+            <div class="calc-container calc">
+              <h3 align="center">Calculations and Code</h3>
+              <ul>
+                <li><a href="/jupyter/stolp-calc.html" target="_blank">
+                    Stolpersteine <span>&#8594;</span>
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+            <!-- Modal Content (The Image) -->
+            <a id="modal-link" target="_blank"><img class="modal-content" id="modal-img"></a>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <footer></footer>
+  </div>
+  <script type="text/javascript">
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.querySelectorAll(".data_img img");
+    var modalImg = document.getElementById("modal-img");
+    var modalLink = document.getElementById("modal-link");
+    var captionText = document.getElementById("caption");
+
+    for (i = 0; i < img.length; i++) {
+      img[i].onclick = function() {
+        modal.style.display = "block";
+        modal.style.visibility = "visible";
+        modal.style.opacity = "1";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+        modalLink.href = this.src;
+      }
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    modal.onclick = function() {
+      //modal.style.display = "none";
+      modal.style.visibility = "hidden";
+      modal.style.opacity = "0";
+    }
+  </script>
+</body>
+
+</html>
