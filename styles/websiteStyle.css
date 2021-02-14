@@ -382,7 +382,7 @@ ul {
   grid-template-columns: 40% 60%;
   grid-template-rows: max-content 1fr;
   margin-bottom: 2rem;
-  transition: 0.8s;
+  transition: 0.2s;
   border-radius: 15px;
 }
 .project-description {
@@ -394,7 +394,7 @@ ul {
 }
 
 .project-logo {
-  transition: 0.8s;
+  transition: 0.2s;
   cursor: pointer;
   display: flex;
   align-content: center;

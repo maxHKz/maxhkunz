@@ -285,7 +285,7 @@ ul {
 
 @keyframes zoom {
   from {
-    transform: scale(0.5)
+    transform: scale(0.9)
   }
 
   to {
@@ -414,6 +414,9 @@ ul {
     min-width: 0px;
     margin-left: 5px;
     margin-right: 5px;
+  }
+  h1.project_title {
+    line-height: 3rem;
   }
 
   .container{
