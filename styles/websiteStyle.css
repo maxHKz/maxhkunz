@@ -39,9 +39,6 @@ p.head-part {
 }
 
 .menu-button {
-  float: left;
-  vertical-align: bottom;
-  padding-right: 30px;
   margin: 0;
 }
 
@@ -456,6 +453,7 @@ ul {
 @media (max-width: 470px){
   .project-container h1{
     font-size: 20px;
+    line-height: 2rem;
   }
   header, div#main_part {
     min-width: 0px;
@@ -479,6 +477,9 @@ ul {
   }
   #head-buttons {
     margin-bottom: 0;
+  }
+  .head-buttons {
+    justify-content: space-between;
   }
   #pdf_box_container{
     margin:0;

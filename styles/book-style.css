@@ -39,9 +39,7 @@ p.head-part {
 }
 
 .menu-button {
-  float: left;
-  vertical-align: bottom;
-  padding-right: 30px;
+
   margin: 0;
 }
 
@@ -434,6 +432,9 @@ ul {
   }
   #head-buttons {
     margin-bottom: 0;
+  }
+  .head-buttons {
+    justify-content: space-between;
   }
   #pdf_box_container{
     margin:0;
