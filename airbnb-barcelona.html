@@ -9,7 +9,7 @@
   </link>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This project displays an in depth data analysis of the impact of vacation rental giant Airbnb in Barcelona. The included charts and numbers illustrate how many and what listings there are, as well as the price distribution around the city. Data science in practice.">
+  <meta name="description" content="How many Airbnb listings are in Barcelona? This project displays an in depth data analysis of the impact of vacation rental giant Airbnb in Barcelona. The included charts and numbers illustrate how many and what listings there are, as well as the price distribution around the city. Data science in practice.">
   <meta name="author" content="Maximilian H. Kunz">
   <title>Impact of Airbnb in Barcelona</title>
 </head>
@@ -49,7 +49,7 @@
                   <h2>LOCATION</h2>
                 </div>
                 <div>
-                  <p align="">To illustrate the scale of Airbnb rentals in Barcelona, the GPS coordinates of the listings are displayed over the city's map, with well known land marks added for orientation. The scale
+                  <p align="">How many Airbnb listings are in Barcelona? To illustrate the scale of Airbnb rentals in Barcelona, the GPS coordinates of the listings are displayed over the city's map, with well known land marks added for orientation. The scale
                     is further drawn out with some of the raw numbers. The different room types available on Airbnb are color-coded.</p>
                 </div>
               </div>
@@ -158,55 +158,21 @@
     var modal = document.getElementById("myModal");
 
     // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img1 = document.getElementById("img1");
-    var img2 = document.getElementById("img2");
-    var img3 = document.getElementById("img3");
-    var img4 = document.getElementById("img4");
-    var img5 = document.getElementById("img5");
+    var img = document.querySelectorAll(".data_img img");
     var modalImg = document.getElementById("modal-img");
     var modalLink = document.getElementById("modal-link");
     var captionText = document.getElementById("caption");
-    img1.onclick = function() {
-      modal.style.display = "block";
-      modal.style.visibility ="visible";
-      modal.style.opacity = "1";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-      modalLink.href = this.dataset.original;
-    }
-    img2.onclick = function() {
-      modal.style.display = "block";
-      modal.style.visibility ="visible";
-      modal.style.opacity = "1";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-      modalLink.href = this.dataset.original;
-    }
-    img3.onclick = function() {
-      modal.style.display = "block";
-      modal.style.visibility ="visible";
-      modal.style.opacity = "1";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-      modalLink.href = this.dataset.original;
-    }
-    img4.onclick = function() {
-      modal.style.display = "block";
-      modal.style.visibility ="visible";
-      modal.style.opacity = "1";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-      modalLink.href = this.dataset.original;
-    }
-    img5.onclick = function() {
-      modal.style.display = "block";
-      modal.style.visibility ="visible";
-      modal.style.opacity = "1";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-      modalLink.href = this.dataset.original;
-    }
 
+    for (i = 0; i < img.length; i++) {
+      img[i].onclick = function() {
+        modal.style.display = "block";
+        modal.style.visibility = "visible";
+        modal.style.opacity = "1";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+        modalLink.href = this.src;
+      }
+    }
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
