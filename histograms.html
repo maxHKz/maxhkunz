@@ -44,37 +44,39 @@
             <!-- First IMAGE LOCATION ************************************************-->
             <div class="pdf_box box_left" style="padding-top:0">
               <div class="double">
-
-              <div class="data_img">
-                <img style="max-width: 500px;" src="images/histo/feet.jpg"
-                alt="Feet Picto-Histogram">
-              </div>
-              <div class="data_img">
-                <img style="max-width: 500px;" src="images/histo/hands.jpg"
-                alt="Hands Picto-Histogram">
-              </div>
+                <div class="data_img">
+                  <img style="max-width: 500px;" src="images/histo/feet.jpg" alt="Feet Picto-Histogram">
+                </div>
+                <div class="data_img">
+                  <img style="max-width: 500px;" src="images/histo/hands.jpg" alt="Hands Picto-Histogram">
+                </div>
               </div>
               <div class="data_description">
                 <div>
                   <h2></h2>
                 </div>
                 <div>
-                  <p align="justify">This project is an attempt to combine data visualization and photography in a simple, intuitive and flexible way. Pictures contain objects of various kinds and shapes, that are positioned in a certain place within the picture's frame. The question, where a specific object is located in a photograph is answered here with a histogram. The histogram is simply the count of the object's pixels in vertical direction, for each pixel column along the photo's horizontal direction.</p>
-                  <p align="justify">To be more exact, for each pixel along the x-axis, we look upwards and count the pixels making up the object of interest for that part of the x-axis. The object of interest is thus labelling the y-axis, making the resulting histogram a 1-dimensional representation of its 2-dimensional picture. Colour codes can be used to highlight various objects, that fit the common label chosen for the y-axis, as shown in both examples, where the histogram shows the left and right foot separately (above), or different stereotypes of the Russian culture (below).</p>
+                  <p align="justify">This project is an attempt to combine data visualization and photography in a simple, intuitive and flexible way. Pictures contain objects of various kinds and shapes, that are positioned in a certain place within
+                    the picture's frame. The question, where a specific object is located in a photograph is answered here with a histogram. The histogram is simply the count of the object's pixels in vertical direction, for each pixel column along
+                    the photo's horizontal direction.</p>
+                  <p align="justify">To be more exact, for each pixel along the x-axis, we look upwards and count the pixels making up the object of interest for that part of the x-axis. The object of interest is thus labelling the y-axis, making the
+                    resulting histogram a 1-dimensional representation of its 2-dimensional picture. Colour codes can be used to highlight various objects, that fit the common label chosen for the y-axis, as shown in both examples, where the
+                    histogram shows the left and right foot separately (above), or different stereotypes of the Russian culture (below).</p>
                 </div>
               </div>
             </div>
             <div class="pdf_box box_left" style="padding-top:0">
               <div class="data_img">
-                <img style="max-width: 600px;" src="images/histo/stereotype.jpg"
-                alt="Stereotypes in Picto-Histogram">
+                <img style="max-width: 600px;" src="images/histo/stereotype.jpg" alt="Stereotypes in Picto-Histogram">
               </div>
               <div class="data_description">
                 <div>
                   <h2></h2>
                 </div>
                 <div>
-                  <p align="justify">For the histogram's creation, a bit of manual work is required at first to outline the shapes of interest. These shapes are turned completely white and the rest of the photograph is recoloured black. Then a small python script is reading these preprocessed pictures, turning every white pixel into a "1", every black pixel into a "0", summing it up along the y-axis and returning the histogram data in csv-format. The csv-file can then be used to draw the histogram's bars and the initial photograph can be combined with the visualization of its data. </p>
+                  <p align="justify">For the histogram's creation, a bit of manual work is required at first to outline the shapes of interest. These shapes are turned completely white and the rest of the photograph is recoloured black. Then a small
+                    python script is reading these preprocessed pictures, turning every white pixel into a "1", every black pixel into a "0", summing it up along the y-axis and returning the histogram data in csv-format. The csv-file can then be used
+                    to draw the histogram's bars and the initial photograph can be combined with the visualization of its data. </p>
                 </div>
               </div>
             </div>
