@@ -9,10 +9,9 @@
   </link>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Photography meets data visualisation through histograms of those
-    pixels, which make up a specific form or pictogram in a photo.">
+  <meta name="description" content="Exploratory Data Analysis of all traffic accidents recorded in Berin in 2019.">
   <meta name="author" content="Maximilian H. Kunz">
-  <title>Picto-Histograms</title>
+  <title>Accidents</title>
 </head>
 
 <body>
@@ -38,63 +37,40 @@
     <div id="main_part">
       <div class="wrapper_pad">
         <main>
-          <h1 id="project_title_airbnb" class="project_title" align=center>Picto-Histograms</h1>
-          <h2 class="title_extra" align="center">counting pixels</h2>
+          <h1 id="project_title_airbnb" class="project_title" align=center>Exploratory Data Analysis</h1>
+          <h2 class="title_extra" align="center">traffic accidents</h2>
           <div id="pdf_box_container">
             <!-- First IMAGE LOCATION ************************************************-->
             <div class="pdf_box box_left" style="padding-top:0">
-              <div class="double">
-                <div class="data_img">
-                  <img style="max-width: 500px;" src="images/histo/feet.jpg" alt="Feet Picto-Histogram">
-                </div>
-                <div class="data_img">
-                  <img style="max-width: 500px;" src="images/histo/hands.jpg" alt="Hands Picto-Histogram">
-                </div>
-              </div>
-              <div class="data_description">
-                <div>
-                  <h2></h2>
-                </div>
-                <div>
-                  <p align="justify">This project is an attempt to combine data visualization and photography in a simple, intuitive and flexible way. Pictures contain objects of various kinds and shapes, that are positioned in a certain place within
-                    the picture's frame. The question, where a specific object is located in a photograph is answered here with a histogram. The histogram is simply the count of the object's pixels in vertical direction, for each pixel column along
-                    the photo's horizontal direction.</p>
-                  <p align="justify">To be more exact, for each pixel along the x-axis, we look upwards and count the pixels making up the object of interest for that part of the x-axis. The object of interest is thus labelling the y-axis, making the
-                    resulting histogram a 1-dimensional representation of its 2-dimensional picture. Colour codes can be used to highlight various objects, that fit the common label chosen for the y-axis, as shown in both examples, where the
-                    histogram shows the left and right foot separately (above), or different stereotypes of the Russian culture (below).</p>
-                </div>
-              </div>
-            </div>
-            <div class="pdf_box box_left" style="padding-top:0">
               <div class="data_img">
-                <img style="max-width: 600px;" src="images/histo/stereotype.jpg" alt="Stereotypes in Picto-Histogram">
+                <img style="max-width: 500px;" src="" alt="">
               </div>
               <div class="data_description">
                 <div>
                   <h2></h2>
                 </div>
                 <div>
-                  <p align="justify">For the histogram's creation, a bit of manual work is required at first to outline the shapes of interest. These shapes are turned completely white and the rest of the photograph is recoloured black. Then a small
-                    python script is reading these preprocessed pictures, turning every white pixel into a "1", every black pixel into a "0", summing it up along the y-axis and returning the histogram data in csv-format. The csv-file can then be used
-                    to draw the histogram's bars and the initial photograph can be combined with the visualization of its data. </p>
+                  <p align="justify">
+                    So how does one explore a dataset? To demonstrate the gain of insight through programming as a tool I got my hands on a dataset provided by the open data platform of the city of Berlin and found data of all traffic accidents
+                    occured in the Berlin city area in 2019. For the visualize the relatioships between features, I chose this time the classic data viz packages <i>matplotlib</i> and <i>seaborn</i> instead of my previous fancier and more laborous
+                    methods.</p>
                 </div>
               </div>
             </div>
           </div>
+          <iframe src="jupyter/unfalle.html" width="1000" height="24900" style="border:none;"></iframe>
           <hr class="seperator">
           <div class="calc-container calc">
-            <h3 align="center">Calculations and Code</h3>
+            <h3 align="center">Source</h3>
             <ul>
               <!-- TO DO ----------------------------------------------------->
-              <li><a href="/jupyter/pictohist.txt" target="_blank">
-                  Form to Histogram (txt-file) <span>&#8594;</span>
-                </a></li>
-              <li><a href="/jupyter/pictohist.py" target="_blank">
-                  Form to Histogram (py-file) <span>&#8594;</span>
-                </a></li>
+              <li><a href="https://daten.berlin.de/datensaetze/strassenverkehrsunf%C3%A4lle-nach-unfallort-berlin-2019" target="_blank">
+                  Dataset <span>&#8594;</span>
+                </a>
+              </li>
             </ul>
           </div>
-          </main>
+        </main>
       </div>
       <div id="myModal" class="modal">
         <!-- The Close Button -->
@@ -105,8 +81,8 @@
         <div id="caption"></div>
       </div>
     </div>
-  <footer></footer>
   </div>
+  <footer></footer>
   <script type="text/javascript">
     // Get the modal
     var modal = document.getElementById("myModal");
