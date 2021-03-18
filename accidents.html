@@ -54,22 +54,33 @@
                     So how does one explore a dataset? To demonstrate the gain of insight through programming as a tool I got my hands on a dataset provided by the open data platform of the city of Berlin and found data of all traffic accidents
                     occured in the Berlin city area in 2019. For the visualize the relatioships between features, I chose this time the classic data viz packages <i>matplotlib</i> and <i>seaborn</i> instead of my previous fancier and more laborous
                     methods.</p>
+                  <div>
+                    <h2>FINDINGS</h2>
+                  </div>
+                  <div>
+                    <p align="justify">Almost half of the deadly accidents happen during dusk/dawn or night time, while during daytime, the vast majority causes light injury. In most accidents, cars are involved, which is not surprising due to the traffic volume they cause.
+                    </p>
+                    <p align="justify">At a vehicle level, the trucks and pedestrians have the highest ratios of severe and deadly injuries (trucks: 1.8%), which is also not surprising, as they form the least heavy and most heavy members of traffic. The most frequent vehicle combination is only cars involved, closely followed by cars with bicycles, which seems to prove the point that Berlin is not a particularly safe city for bicycles. Also motor bikes and pedestrians have a lot of collisions with cars. The 3 most deadly combinatios all involve pedestrians, with cars, trucks and other vehicles respectively. So walking is the most dangerous form of transport quantitatively.</p>
+                    <p align="justify">The distribution of the accident count on a street level, shows quite a few outliers that are responsible for a large amount of accidents. Interestingly, the average injury level seems to decrease with the amount of accidents happening in a specific street. There are a handful of streets that have a high accident count with high chance of severe and deadly injury however.</p>
+                    <p align="justify">The amount of accidents is high during weekdays and decreaes a bit during the winter months. On a daily level, there are 2 spikes during the rush hour times during working days, the second rushhour being a bit more accident prone.</p>
+                    <p align="justify">The street condition has little to no relation to the injury level. The rations stay constant across street conditions and districts.</p>
+                    <p align="justify">The analysis of type of accidents confirms earlier findings. The most dangerous are collisions with pedestrians. Head on collisiosn are naturally also dangerous. Interestingly, the deadliest type is coming of the road on the left side, which is significantly more deadly than getting of to the right side. There is also a correlation between bicycle involvement and collisions with waiting/halting traffic.</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <iframe src="jupyter/unfalle.html" width="1000" height="24900" style="border:none;"></iframe>
-          <hr class="seperator">
-          <div class="calc-container calc">
-            <h3 align="center">Source</h3>
-            <ul>
-              <!-- TO DO ----------------------------------------------------->
-              <li><a href="https://daten.berlin.de/datensaetze/strassenverkehrsunf%C3%A4lle-nach-unfallort-berlin-2019" target="_blank">
-                  Dataset <span>&#8594;</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+            <iframe src="jupyter/unfalle.html" width="1000" height="25700" style="border:none;"></iframe>
+            <hr class="seperator">
+            <div class="calc-container calc">
+              <h3 align="center">Source</h3>
+              <ul>
+                <!-- TO DO ----------------------------------------------------->
+                <li><a href="https://daten.berlin.de/datensaetze/strassenverkehrsunf%C3%A4lle-nach-unfallort-berlin-2019" target="_blank">
+                    Dataset <span>&#8594;</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
         </main>
       </div>
       <div id="myModal" class="modal">
